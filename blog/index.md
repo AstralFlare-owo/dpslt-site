@@ -25,5 +25,9 @@ friendLink:
       link: https://blog.kitramgp.cn/
       avatar: https://blog.kitramgp.cn/img/kitra1.jpg
       desc: 这里记录了 Kitra 在计算机技术上的胡思乱想，分享编程实践、技术笔记和校园生活，写给同时热爱技术的你。
+    - name: Capscene's Blog
+      link: https://capscene.top/
+      avatar: https://capscene.top/wp-content/uploads/2026/05/cropped-3e328c574323b04658ac39eaa9907eba-192x192.jpg
+      desc: See what you love, seize it in memory, and let it be preserved
 article: false
 ---
