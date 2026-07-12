@@ -76,7 +76,16 @@ const teekConfig = defineTeekConfig({
       inputPosition: "top",
       loading: "lazy"
     }
-  }
+  },
+  siteAnalytics: [
+    {
+      provider: "umami",
+      options: {
+        id: "3a5d6659-cce3-42cd-9353-20ec242a6feb",
+        src: "https://cloud.umami.is/script.js"
+      }
+    }
+  ]
 });
 
 // https://vitepress.dev/reference/site-config
