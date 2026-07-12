@@ -1,0 +1,252 @@
+/*
+  @name: Catppuccin Latte & Macchiato Theme for VitePress (and Teek Theme)
+  @author: OpenAI Codex GPT-5.6-Sol
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Catppuccin Latte */
+  --ca-rosewater: #dc8a78;
+  --ca-flamingo: #dd7878;
+  --ca-pink: #ea76cb;
+  --ca-mauve: #8839ef;
+  --ca-red: #d20f39;
+  --ca-maroon: #e64553;
+  --ca-peach: #fe640b;
+  --ca-yellow: #df8e1d;
+  --ca-green: #40a02b;
+  --ca-teal: #179299;
+  --ca-sky: #04a5e5;
+  --ca-sapphire: #209fb5;
+  --ca-blue: #1e66f5;
+  --ca-lavender: #7287fd;
+  --ca-text: #4c4f69;
+  --ca-subtext-1: #5c5f77;
+  --ca-subtext-0: #6c6f85;
+  --ca-overlay-2: #7c7f93;
+  --ca-overlay-1: #8c8fa1;
+  --ca-overlay-0: #9ca0b0;
+  --ca-surface-2: #acb0be;
+  --ca-surface-1: #bcc0cc;
+  --ca-surface-0: #ccd0da;
+  --ca-base: #eff1f5;
+  --ca-mantle: #e6e9ef;
+  --ca-crust: #dce0e8;
+
+  /* Lavender is the initial color before Teek restores the saved selection. */
+  --ca-accent: var(--ca-lavender);
+  --vp-c-brand-1: var(--ca-accent);
+  --vp-c-brand-2: color-mix(in srgb, var(--ca-accent) 88%, var(--ca-base));
+  --vp-c-brand-3: color-mix(in srgb, var(--ca-accent) 76%, var(--ca-base));
+  --vp-c-brand-soft: color-mix(in srgb, var(--ca-accent) 18%, transparent);
+
+  /* VitePress surfaces and typography. */
+  --vp-c-bg: var(--ca-base);
+  --vp-c-bg-alt: var(--ca-mantle);
+  --vp-c-bg-elv: var(--ca-surface-0);
+  --vp-c-bg-soft: var(--ca-surface-0);
+  --vp-c-text-1: var(--ca-text);
+  --vp-c-text-2: var(--ca-subtext-1);
+  --vp-c-text-3: var(--ca-subtext-0);
+  --vp-c-divider: color-mix(in srgb, var(--ca-overlay-0) 48%, transparent);
+  --vp-c-gutter: var(--ca-mantle);
+
+  /* Semantic colors used by VitePress containers and badges. */
+  --vp-c-default-1: var(--ca-overlay-1);
+  --vp-c-default-2: var(--ca-overlay-0);
+  --vp-c-default-3: var(--ca-surface-2);
+  --vp-c-default-soft: color-mix(in srgb, var(--ca-overlay-1) 18%, transparent);
+  --vp-c-tip-1: var(--ca-teal);
+  --vp-c-tip-2: color-mix(in srgb, var(--ca-teal) 88%, var(--ca-base));
+  --vp-c-tip-3: color-mix(in srgb, var(--ca-teal) 76%, var(--ca-base));
+  --vp-c-tip-soft: color-mix(in srgb, var(--ca-teal) 18%, transparent);
+  --vp-c-note-1: var(--ca-blue);
+  --vp-c-note-2: color-mix(in srgb, var(--ca-blue) 88%, var(--ca-base));
+  --vp-c-note-3: color-mix(in srgb, var(--ca-blue) 76%, var(--ca-base));
+  --vp-c-note-soft: color-mix(in srgb, var(--ca-blue) 18%, transparent);
+  --vp-c-success-1: var(--ca-green);
+  --vp-c-success-2: color-mix(in srgb, var(--ca-green) 88%, var(--ca-base));
+  --vp-c-success-3: color-mix(in srgb, var(--ca-green) 76%, var(--ca-base));
+  --vp-c-success-soft: color-mix(in srgb, var(--ca-green) 18%, transparent);
+  --vp-c-warning-1: var(--ca-yellow);
+  --vp-c-warning-2: color-mix(in srgb, var(--ca-yellow) 88%, var(--ca-base));
+  --vp-c-warning-3: color-mix(in srgb, var(--ca-yellow) 76%, var(--ca-base));
+  --vp-c-warning-soft: color-mix(in srgb, var(--ca-yellow) 18%, transparent);
+  --vp-c-danger-1: var(--ca-red);
+  --vp-c-danger-2: color-mix(in srgb, var(--ca-red) 88%, var(--ca-base));
+  --vp-c-danger-3: color-mix(in srgb, var(--ca-red) 76%, var(--ca-base));
+  --vp-c-danger-soft: color-mix(in srgb, var(--ca-red) 18%, transparent);
+
+  /* Catppuccin custom containers. */
+  --vp-custom-block-info-border: color-mix(in srgb, var(--ca-sapphire) 52%, transparent);
+  --vp-custom-block-info-text: var(--ca-text);
+  --vp-custom-block-info-bg: color-mix(in srgb, var(--ca-sapphire) 13%, transparent);
+  --vp-custom-block-info-code-bg: color-mix(in srgb, var(--ca-sapphire) 18%, transparent);
+  --vp-custom-block-tip-border: color-mix(in srgb, var(--ca-teal) 52%, transparent);
+  --vp-custom-block-tip-text: var(--ca-text);
+  --vp-custom-block-tip-bg: color-mix(in srgb, var(--ca-teal) 13%, transparent);
+  --vp-custom-block-tip-code-bg: color-mix(in srgb, var(--ca-teal) 18%, transparent);
+  --vp-custom-block-warning-border: color-mix(in srgb, var(--ca-yellow) 52%, transparent);
+  --vp-custom-block-warning-text: var(--ca-text);
+  --vp-custom-block-warning-bg: color-mix(in srgb, var(--ca-yellow) 13%, transparent);
+  --vp-custom-block-warning-code-bg: color-mix(in srgb, var(--ca-yellow) 18%, transparent);
+  --vp-custom-block-danger-border: color-mix(in srgb, var(--ca-red) 52%, transparent);
+  --vp-custom-block-danger-text: var(--ca-text);
+  --vp-custom-block-danger-bg: color-mix(in srgb, var(--ca-red) 13%, transparent);
+  --vp-custom-block-danger-code-bg: color-mix(in srgb, var(--ca-red) 18%, transparent);
+  --vp-custom-block-details-border: color-mix(in srgb, var(--ca-mauve) 52%, transparent);
+  --vp-custom-block-details-text: var(--ca-text);
+  --vp-custom-block-details-bg: color-mix(in srgb, var(--ca-mauve) 13%, transparent);
+  --vp-custom-block-details-code-bg: color-mix(in srgb, var(--ca-mauve) 18%, transparent);
+  --vp-custom-block-note-border: color-mix(in srgb, var(--ca-blue) 52%, transparent);
+  --vp-custom-block-note-text: var(--ca-text);
+  --vp-custom-block-note-bg: color-mix(in srgb, var(--ca-blue) 13%, transparent);
+  --vp-custom-block-note-code-bg: color-mix(in srgb, var(--ca-blue) 18%, transparent);
+  --vp-code-block-bg: var(--ca-mantle);
+  --vp-code-line-highlight-color: color-mix(in srgb, var(--ca-accent) 12%, transparent);
+  --vp-code-line-number-color: var(--ca-overlay-0);
+
+  /* Teek and its Element Plus based controls. */
+  --tk-theme-color: var(--vp-c-brand-1);
+  --tk-line-color: var(--vp-c-divider);
+  --tk-text-color-regular: var(--ca-subtext-1);
+  --tk-text-color-secondary: var(--ca-subtext-0);
+  --tk-text-color-placeholder: var(--ca-overlay-1);
+  --tk-text-color-disabled: var(--ca-overlay-0);
+  --tk-bg-color: var(--ca-base);
+  --tk-bg-color-elm: var(--ca-surface-0);
+  --tk-bg-color-mute: var(--ca-mantle);
+  --tk-fill-color: var(--ca-surface-0);
+  --tk-fill-color-blank: var(--ca-base);
+  --tk-fill-color-light: var(--ca-surface-1);
+  --tk-fill-color-dark: var(--ca-mantle);
+  --tk-home-bg-color: var(--ca-base);
+  --tk-color-success: var(--ca-green);
+  --tk-color-warning: var(--ca-yellow);
+  --tk-color-danger: var(--ca-red);
+  --tk-color-error: var(--ca-maroon);
+  --tk-color-info: var(--ca-sapphire);
+  --tk-el-color-success: var(--ca-green);
+  --tk-el-color-warning: var(--ca-yellow);
+  --tk-el-color-danger: var(--ca-red);
+  --tk-el-color-error: var(--ca-maroon);
+  --tk-el-color-info: var(--ca-sapphire);
+  --tk-card-shadow: 0 2px 12px color-mix(in srgb, var(--ca-crust) 72%, transparent);
+  --tk-hover-shadow: 0 4px 18px color-mix(in srgb, var(--ca-crust) 82%, transparent);
+
+  --vp-font-family-base: 'Noto Serif', 'Noto Serif CJK SC', serif;
+  --vp-font-family-code: 'Maple Mono NF CN', monospace;
+}
+
+:root.dark {
+  color-scheme: dark;
+
+  /* Catppuccin Macchiato */
+  --ca-rosewater: #f4dbd6;
+  --ca-flamingo: #f0c6c6;
+  --ca-pink: #f5bde6;
+  --ca-mauve: #c6a0f6;
+  --ca-red: #ed8796;
+  --ca-maroon: #ee99a0;
+  --ca-peach: #f5a97f;
+  --ca-yellow: #eed49f;
+  --ca-green: #a6da95;
+  --ca-teal: #8bd5ca;
+  --ca-sky: #91d7e3;
+  --ca-sapphire: #7dc4e4;
+  --ca-blue: #8aadf4;
+  --ca-lavender: #b7bdf8;
+  --ca-text: #cad3f5;
+  --ca-subtext-1: #b8c0e0;
+  --ca-subtext-0: #a5adcb;
+  --ca-overlay-2: #939ab7;
+  --ca-overlay-1: #8087a2;
+  --ca-overlay-0: #6e738d;
+  --ca-surface-2: #5b6078;
+  --ca-surface-1: #494d64;
+  --ca-surface-0: #363a4f;
+  --ca-base: #24273a;
+  --ca-mantle: #1e2030;
+  --ca-crust: #181926;
+
+  --vp-c-bg: var(--ca-base);
+  --vp-c-bg-alt: var(--ca-mantle);
+  --vp-c-bg-elv: var(--ca-surface-0);
+  --vp-c-bg-soft: var(--ca-surface-0);
+  --vp-c-text-1: var(--ca-text);
+  --vp-c-text-2: var(--ca-subtext-1);
+  --vp-c-text-3: var(--ca-subtext-0);
+  --tk-bg-color: var(--ca-base);
+  --tk-bg-color-elm: var(--ca-surface-0);
+  --tk-bg-color-mute: var(--ca-mantle);
+  --tk-fill-color: var(--ca-surface-0);
+  --tk-fill-color-blank: var(--ca-base);
+  --tk-fill-color-light: var(--ca-surface-1);
+  --tk-fill-color-dark: var(--ca-mantle);
+  --tk-home-bg-color: var(--ca-base);
+  --tk-card-shadow: 0 3px 14px color-mix(in srgb, var(--ca-crust) 68%, transparent);
+  --tk-hover-shadow: 0 7px 24px color-mix(in srgb, var(--ca-crust) 82%, transparent);
+}
+
+html[theme-color="ca-rosewater"] { --ca-accent: var(--ca-rosewater); }
+html[theme-color="ca-flamingo"] { --ca-accent: var(--ca-flamingo); }
+html[theme-color="ca-pink"] { --ca-accent: var(--ca-pink); }
+html[theme-color="ca-mauve"] { --ca-accent: var(--ca-mauve); }
+html[theme-color="ca-red"] { --ca-accent: var(--ca-red); }
+html[theme-color="ca-maroon"] { --ca-accent: var(--ca-maroon); }
+html[theme-color="ca-peach"] { --ca-accent: var(--ca-peach); }
+html[theme-color="ca-yellow"] { --ca-accent: var(--ca-yellow); }
+html[theme-color="ca-green"] { --ca-accent: var(--ca-green); }
+html[theme-color="ca-teal"] { --ca-accent: var(--ca-teal); }
+html[theme-color="ca-sky"] { --ca-accent: var(--ca-sky); }
+html[theme-color="ca-sapphire"] { --ca-accent: var(--ca-sapphire); }
+html[theme-color="ca-blue"] { --ca-accent: var(--ca-blue); }
+html[theme-color="ca-lavender"] { --ca-accent: var(--ca-lavender); }
+
+html[theme-color^="ca-"] {
+  /* Override Teek's inline Macchiato calculation when the appearance is Latte. */
+  --vp-c-brand-1: var(--ca-accent) !important;
+  --vp-c-brand-2: color-mix(in srgb, var(--ca-accent) 88%, var(--ca-base)) !important;
+  --vp-c-brand-3: color-mix(in srgb, var(--ca-accent) 76%, var(--ca-base)) !important;
+  --vp-c-brand-soft: color-mix(in srgb, var(--ca-accent) 18%, transparent) !important;
+  --tk-color-primary: var(--ca-accent);
+  --tk-color-primary-light-3: color-mix(in srgb, var(--ca-accent) 72%, var(--ca-text));
+  --tk-color-primary-light-5: color-mix(in srgb, var(--ca-accent) 55%, var(--ca-text));
+  --tk-color-primary-light-8: color-mix(in srgb, var(--ca-accent) 22%, var(--ca-base));
+  --tk-el-color-primary: var(--ca-accent);
+  --tk-el-color-primary-light-3: color-mix(in srgb, var(--ca-accent) 72%, var(--ca-text));
+  --tk-el-color-primary-light-5: color-mix(in srgb, var(--ca-accent) 55%, var(--ca-text));
+  --tk-el-color-primary-light-8: color-mix(in srgb, var(--ca-accent) 22%, var(--ca-base));
+  --tk-el-color-primary-light-9: color-mix(in srgb, var(--ca-accent) 12%, var(--ca-base));
+}
+
+/* Keep container semantics independent from the selected site accent. */
+.custom-block.info :is(.custom-block-title, a, code),
+.custom-block.info [class*="custom-block-title"]::before {
+  color: var(--ca-sapphire);
+}
+
+.custom-block.tip :is(.custom-block-title, a, code),
+.custom-block.tip [class*="custom-block-title"]::before {
+  color: var(--ca-teal);
+}
+
+.custom-block.warning :is(.custom-block-title, a, code),
+.custom-block.warning [class*="custom-block-title"]::before {
+  color: var(--ca-yellow);
+}
+
+.custom-block.danger :is(.custom-block-title, a, code),
+.custom-block.danger [class*="custom-block-title"]::before {
+  color: var(--ca-red);
+}
+
+.custom-block.details :is(summary, a, code) {
+  color: var(--ca-mauve);
+}
+
+.custom-block.note :is(.custom-block-title, a, code),
+.custom-block.note [class*="custom-block-title"]::before {
+  color: var(--ca-blue);
+}
