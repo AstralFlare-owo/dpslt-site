@@ -134,6 +134,15 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/AstralFlare-owo/dpslt-site' }
-    ]
+    ],
+
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'ZG7JOJIL8B',
+        apiKey: '22d31689640a4683bcc3a2b1dc2272fe',
+        indexName: '岩的小站',
+      }
+    }
   }
 })
