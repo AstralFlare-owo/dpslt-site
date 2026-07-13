@@ -62,10 +62,10 @@ const teekConfig = defineTeekConfig({
   comment: {
     provider: "giscus",
     options: {
-      repo: "AstralFlare-owo/TZ-Site",
-      repoId: "R_kgDOMpUFhQ",
-      category: "Giscus 评论系统",
-      categoryId: "DIC_kwDOMpUFhc4Ch_yZ",
+      repo: "AstralFlare-owo/dpslt-site",
+      repoId: "R_kgDOTWYgPQ",
+      category: "Giscus Threads",
+      categoryId: "DIC_kwDOTWYgPc4DBEqz",
       reactionsEnabled: "1",
       mapping: "pathname",
       lang: "zh-CN",
